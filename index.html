@@ -192,7 +192,7 @@ _  /|  /  / /_/ / _  /  _  /___       _  /    /  __// /_/ / _  / / / / /    _(__
 <script>
     var Terminal = Terminal || function (cmdLine, output) {
         var cmdList = [
-            'contact','ls', 'whoami', 'clear',
+            'contact', 'whoami', 'clear',
         ];
       
        
@@ -245,16 +245,7 @@ _  /|  /  / /_/ / _  /  _  /___       _  /    /  __// /_/ / _  / / / / /    _(__
                     case 'whoami':
                         outputHtml("Nu1L");
                         break;
-                    case 'ls':
-                        if (args.length) {
-                            if (args[0].toLowerCase().indexOf('members') !== -1) {
-                                outputHtml("<a href='./members/'>./members/</a>");
-                                break
-                            } 
-                        }
-                        outputHtml('<div class="ls-files">members</div>');
-
-                        break;
+                  
                     default:
                         if (cmd) {
                             outputHtml(cmd + ': command not found');
