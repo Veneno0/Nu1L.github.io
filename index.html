@@ -163,30 +163,23 @@
     <header>
 
   <pre class="ascii name">
-██╗      █████╗ ███╗   ███╗██████╗ ██╗ █████╗  ██████╗ ███████╗███████╗ ██████╗    
-██║     ██╔══██╗████╗ ████║██╔══██╗██║██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔════╝    
-██║     ███████║██╔████╔██║██████╔╝██║███████║██║   ██║███████╗█████╗  ██║         
-██║     ██╔══██║██║╚██╔╝██║██╔═══╝ ██║██╔══██║██║   ██║╚════██║██╔══╝  ██║         
-███████╗██║  ██║██║ ╚═╝ ██║██║     ██║██║  ██║╚██████╔╝███████║███████╗╚██████╗    
-╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝ ╚═════╝    
+_____   __        ____________        ________                          ___                ________                        
+___  | / /____  ____<  /___  /        ___  __/_____ ______ ________ ___ _( )________       ___  __ \______ ________ ______ 
+__   |/ / _  / / /__  / __  /         __  /   _  _ \_  __ `/__  __ `__ \_|/ __  ___/       __  /_/ /_  __ `/__  __ `/_  _ \
+_  /|  /  / /_/ / _  /  _  /___       _  /    /  __// /_/ / _  / / / / /    _(__  )        _  ____/ / /_/ / _  /_/ / /  __/
+/_/ |_/   \__,_/  /_/   /_____/       /_/     \___/ \__,_/  /_/ /_/ /_/     /____/         /_/      \__,_/  _\__, /  \___/ 
+                                                                                                            /____/          
 </pre>
 </header>
     <nav>
-  <ul>
-    <li><a href="/#">Home</a></li>
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#contact">Contact</a></li>
-    <li><a href="/#team">Team</a></li>
-    <li><a href="/#projects">Projects</a></li>
-    <li><a href="/#tools">Tools</a></li>
-    <li><a href="/#talks">Talks</a></li>
-    <li><a href="/#posts">Posts</a></li>
-    <li><a href="/#articles">Articles</a></li>
-    <li><a href="/darcli/rss.xml">RSS</a>/<a href="/darcli/atom.xml">Atom</a></li>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About Nu1L &Contact Us</a></li>
+    <li><a href="/members/">Team's Members</a></li>
   </ul>
 </nav>
 
-
+    <main>
     <div id="container">
     <output></output>
     <div id="input-line" class="input-line">
@@ -195,21 +188,14 @@
     </div>
 </div>
 
-
+</main>
 <script>
     var Terminal = Terminal || function (cmdLine, output) {
         var cmdList = [
-            'clear', 'whoami', 'ls',
+            'contact','ls', 'whoami', 'clear',
         ];
-        var memberList = [
-            'Venenof7', 'Marche147', 'Albertchang', 'misty', 'wxy', 'bird',
-            'Q7', 'virusdefender', 'wupco', '0X9A82', 'Homura', 'acdxvfsvd',
-            'balisong', 'Mr.R', '无名侠', 'markak_', 'Miscgo', 'Hcamael',
-            '画船听雨', '渡。', 'scanf', 'lemon', 'plusls', '4uuu Nya',
-            'xiaojunjie', 'explorer', 'yulegeyu', 'pzhxbz', 'Lucifaer', 'pipig',
-            'rh',
-        ]
-        var blog = "https://www.github.com"
+      
+        var blog = "./blog/"
 
         window.addEventListener('click', function (e) {
             cmdLine.focus();
@@ -251,13 +237,18 @@
                     case 'help':
                         outputHtml('<div>' + cmdList.join('<br>') + '</div>');
                         break;
+                    case 'contact':
+                        outputHtml("If u want to join us:)");
+                        outputHtml("You can send mail to Nu1Lctf@163.com");
+                        outputHtml("e.g:`id`&`web or pwn or crypto or all`&`your profile`");
+                        break;
                     case 'whoami':
                         outputHtml("Nu1L");
                         break;
                     case 'ls':
                         if (args.length) {
                             if (args[0].toLowerCase().indexOf('members') !== -1) {
-                                outputHtml('<div>' + memberList.join('<br>') + '</div>');
+                                outputHtml("<a href='./members/'>./members/</a>");
                                 break
                             } else if (args[0].toLowerCase().indexOf("blog") !== -1) {
                                 outputHtml('<a href="' + blog + '" target="_blank">' + blog + '</a>');
