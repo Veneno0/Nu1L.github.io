@@ -1,16 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-html {
-  background-image: url("../background.gif");
-}
-
 body {
   background-color: rgba(0,0,0,0.97);
   color: rgba(255,255,255,0.7);
-  padding: 5px;
+  padding: 51px;
   margin: auto;
-  width: 100%;
-  border: 1px dashed rgba(255,255,255,0.7);
+  width: 80%;
   font-family: "Open Sans";
 }
 
