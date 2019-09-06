@@ -191,7 +191,7 @@ _  /|  /  / /_/ / _  /  _  /___       _  /    /  __// /_/ / _  / / / / /    _(__
 <script>
     var Terminal = Terminal || function (cmdLine, output) {
         var cmdList = [
-            'contact', 'whoami', 'clear',
+            'contact', 'whoami', 'clear','readflag',
         ];
       
        
@@ -244,8 +244,8 @@ _  /|  /  / /_/ / _  /  _  /___       _  /    /  __// /_/ / _  / / / / /    _(__
                     case 'whoami':
                         outputHtml("Nu1L");
                         break;
-                    case 'test':
-                        outputHtml("testaaaaaaaaa");
+                    case 'readflag':
+                        outputHtml("N1CTF{Welcome_to_N1CTF2019_havefun_wow}");
                         break;
                     default:
                         if (cmd) {
